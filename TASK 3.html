@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Background Color</title>
+</head>
+<body style="text-align:center; padding:50px;">
+
+  <h2>Click the Button to Change Background Color</h2>
+  <button id="colorBtn">Click color will change</button>
+
+  <script>
+    function getRandomColor() {
+      let red = Math.floor(Math.random() * 256);
+      let green = Math.floor(Math.random() * 256);
+      let blue = Math.floor(Math.random() * 256);
+
+      return `rgb(${red}, ${green}, ${blue})`;
+    }
+    let button = document.getElementById("colorBtn");
+    button.addEventListener("click", function() {
+      document.body.style.backgroundColor = getRandomColor();
+    });
+  </script>
+</body>
+</html>
